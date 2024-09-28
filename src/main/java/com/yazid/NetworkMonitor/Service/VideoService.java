@@ -1,4 +1,4 @@
-package com.yazid.NetworkMonitor;
+package com.yazid.NetworkMonitor.Service;
 
 import com.yazid.NetworkMonitor.Service.SnmpService;
 import org.apache.commons.io.FileUtils;

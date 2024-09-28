@@ -1,7 +1,7 @@
 package com.yazid.NetworkMonitor.controller;
 
 import com.yazid.NetworkMonitor.Service.SnmpService;
-import com.yazid.NetworkMonitor.VideoService;
+import com.yazid.NetworkMonitor.Service.VideoService;
 import com.yazid.NetworkMonitor.dto.*;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Random;
 
 @Controller
 @RequestMapping("/api/snmp")
@@ -77,4 +78,11 @@ public class SnmpController {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(snmpService.snmpGetSnrMargin(ipAddress));
     }
+    @PostMapping("/snrMargintest")
+    public ResponseEntity<Float> getSnrMargintest(@RequestBody String ipAddress){
+        Random random = new Random();
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(random.nextFloat()*10);
+    }
+
 }

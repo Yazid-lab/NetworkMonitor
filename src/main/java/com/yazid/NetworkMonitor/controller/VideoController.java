@@ -1,6 +1,6 @@
 package com.yazid.NetworkMonitor.controller;
 
-import com.yazid.NetworkMonitor.VideoService;
+import com.yazid.NetworkMonitor.Service.VideoService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.CacheControl;
 import org.springframework.http.MediaType;
