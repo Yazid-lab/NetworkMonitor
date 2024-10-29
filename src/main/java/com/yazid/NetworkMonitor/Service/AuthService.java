@@ -47,7 +47,7 @@ public class AuthService {
 
         String token = generateVerificationToken(user);
         NotificationEmail notificationEmail = new NotificationEmail("Please Activate your account",user.getEmail(),
-                "Thank you for signing up to reddit, "+"Please click on the link below to activate your account : "+
+                "Thank you for signing up, "+"Please click on the link below to activate your account : "+
                         "http://localhost:8080/api/auth/accountVerification/"+token);
         mailService.sendMail(notificationEmail);
     }
